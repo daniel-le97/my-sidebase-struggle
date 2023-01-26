@@ -24,6 +24,7 @@
     "@prisma/client": "^4.8.0",
     "@trpc/client": "^10.5.0",
     "@trpc/server": "^10.5.0",
+    "sass": "^1.57.1",
     "superjson": "^1.12.1",
     "trpc-nuxt": "^0.4.4",
     "trpc-openapi": "^1.1.2",
