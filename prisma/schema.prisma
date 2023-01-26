@@ -18,3 +18,46 @@ model User {
 }
 
 
+model Pokemon {
+  id                String  @id @default(cuid())
+  name              String
+  supertype         String
+  subtypes          String[]
+  hp                String
+  types             String[]
+  evolvesFrom       String
+  abilities         Ability[]
+  attacks           Attack[]
+  weaknesses        Weakness[]
+  retreatCost       String[]
+  convertedRetreatCost Int
+  set               Set
+  number            String
+  artist            String
+  rarity            String
+  flavorText        String
+  nationalPokedexNumbers  Int[]
+  legalities        Legalities
+  images            Images
+  tcgplayer         TCGPlayer
+  cardmarket        CardMarket
+}
+
+model Ability {
+  name        String
+  text        String
+  type        String
+}
+
+model Attack {
+  name        String
+  cost        String[]
+  convertedEnergyCost Int
+  damage      String
+  text        String
+}
+
+model Weakness {
+  type        String
+  value       String
+}
