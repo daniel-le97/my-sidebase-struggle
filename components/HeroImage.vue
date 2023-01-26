@@ -1,11 +1,11 @@
 <template>
   <div class="relative hero-image-container">
-    <img class="hero-image" src="https://images.unsplash.com/photo-1505535162959-9bbcb4ab22d6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1459&q=80" alt="hero image">
+    <img class="hero-image" src="https://images.unsplash.com/photo-1613771404721-1f92d799e49f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80" alt="hero image">
     <div class="hero-text">
       <h1 class=" text-3xl text-shadow-overlay">
-        Invest in one-of-a-kind  quality pieces that will empower your personal style and  last a lifetime
+
       </h1>
-      <small>Learn more about us and our services</small>
+      <small></small>
     </div>
   </div>
 </template>e>
@@ -23,7 +23,7 @@ export default {
 <style>
 .hero-image {
   width: 100%;
-  height: 500px;
+  height: 400px;
   object-fit: cover;
   position: relative;
 }
