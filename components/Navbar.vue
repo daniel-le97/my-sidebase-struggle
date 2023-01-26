@@ -1,25 +1,21 @@
-
-<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <nav class="fixed w-full z-10 top-0 bg-white shadow-md p-2   transition-all" :class="{'bg-white shadow-md': isVisible, '    bg-custom text-white transition-all ': !isVisible}">
     <div class="container mx-auto flex flex-wrap items-center justify-between">
       <div class="w-1/3">
         <router-link to="/" class="text-lg font-medium  no-underline" active-class="active-link">
-         <img src="../assets/Logo.png" alt="" width="80"  class="shadow-xl rounded-xl">
+          <img src="../assets/Logo.png" alt="" width="80" class="shadow-xl rounded-xl">
         </router-link>
       </div>
       <div class="w-1/3 hidden md:block">
         <div class="text-center">
-
-
           <router-link to="/cart" class="ml-4 text-base no-underline hover:text-gray-800" active-class="active-link">
             Cart
           </router-link>
           <router-link to="/checkout" class="ml-4 text-base no-underline hover:text-gray-800 " active-class="active-link">
-           Checkout
+            Checkout
           </router-link>
           <router-link to="/about" class="ml-4 text-base no-underline hover:text-gray-800" active-class="active-link">
-         About Us
+            About Us
           </router-link>
   <nuxt-link to="/protected" class="ml-4 text-base no-underline hover:text-gray-800">
         Login
@@ -73,43 +69,6 @@ border-bottom: 3px solid #2bd882;
 }
 </style>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- <template>
   <nav class="bg-gray-900">
     <div class="px-3 py-2 flex items-center justify-between">
@@ -150,27 +109,7 @@ border-bottom: 3px solid #2bd882;
   </nav>
 </template>
 
-
-
  -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- <script>
 import { useRoute } from 'vue-router'

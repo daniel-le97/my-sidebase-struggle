@@ -20,7 +20,8 @@
               "info",
               "warn",
               "trace",
-              "error"
+              "error",
+              "log"
             ]
           }
         ]
