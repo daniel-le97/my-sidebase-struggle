@@ -17,9 +17,9 @@
           <router-link to="/about" class="ml-4 text-base no-underline hover:text-gray-800" active-class="active-link">
             About Us
           </router-link>
-  <nuxt-link to="/protected" class="ml-4 text-base no-underline hover:text-gray-800">
-        Login
-      </nuxt-link>
+          <nuxt-link to="/protected" class="ml-4 text-base no-underline hover:text-gray-800">
+            Login
+          </nuxt-link>
         </div>
       </div>
       <div class="w-1/3">
@@ -38,7 +38,7 @@
 export default {
   data () {
     return {
-      isVisible: true,
+      isVisible: true
 
     }
   },
