@@ -1,8 +1,7 @@
-export const useAppState = reactive({
+export const AppState = reactive({
   user: null,
   account: {} ,
-  products: [] ,
-  activeProduct: {} ,
 
+pokemon:[]
 
 })
