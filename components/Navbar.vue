@@ -10,7 +10,10 @@
         <div class="text-center">
 
 
-    
+
+          <nuxt-link to="/" class="ml-4 text-base no-underline hover:text-gray-800">
+            Home
+          </nuxt-link>
           <nuxt-link to="/protected" class="ml-4 text-base no-underline hover:text-gray-800">
             Login
           </nuxt-link>

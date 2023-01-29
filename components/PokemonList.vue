@@ -1,9 +1,11 @@
 <template>
   <div class="container">
 
-<ul class="flex flex-wrap gap-4 justify-center" >
-  <li class="  list-item  rounded-md  " v-for="p in pokemon">
+<ul class="flex flex-wrap gap-4 justify-center" v-if="pokemon" >
+  <li class="  list-item  rounded-md  " v-for="p in pokemon" :key="p.name" v-if="pokemon">
+      <nuxt-link :to="`/Search/${p.name}`">
 <p class="text-center font-bold">  {{ p.name }}</p>
+</nuxt-link>
 <div class="">
   <img :src="p.image" alt="pokemon Image" width="100">
 </div>
@@ -15,7 +17,7 @@
 
 
 <script>
-import { pokemonService } from "~~/composables/Services/PokemonService.js";
+;
 
 export default {
   setup(){
