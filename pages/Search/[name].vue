@@ -1,11 +1,11 @@
 <template>
-  <div class="container text-center my-4">
+  <div class="container text-center my-4" v-if="pokemonCards">
 
-<ul class="flex flex-wrap justify-center gap-4">
-  <li class="list-item hover:shadow-xl shadow-slate-300 transition-all shadow-md " v-for="p in pokemonCards?.data">
+<ul class="flex  flex-wrap justify-center gap-4">
+  <li class="" v-for="p in pokemonCards?.data">
 
 <nuxt-link  :to="`/CardDetails/${p.id}`">
-  <img :src="p?.images?.large" alt="card image" width="200">
+  <img :src="p?.images?.large" alt="card image" width="200" class="image">
 </nuxt-link>
   </li>
 </ul>
@@ -36,8 +36,12 @@ params:{
 
 
 <style lang="scss" scoped>
-.list-item:hover img{
-  transform: scale(1.5);
-  transition: all 0.5 ease;
+.image{
+    transition: all 0.5 ease ;
 }
+.image:hover{
+  transform: scale(1.14);
+  transition: transform 0.5 ease ;
+}
+
 </style>
