@@ -1,7 +1,7 @@
 <template>
   <div class="container">
 
-<ul class="flex flex-wrap gap-4" >
+<ul class="flex flex-wrap gap-4 justify-center" >
   <li class="  list-item  rounded-md  " v-for="p in pokemon">
 <p class="text-center font-bold">  {{ p.name }}</p>
 <div class="">
