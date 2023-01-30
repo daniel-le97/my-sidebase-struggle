@@ -1,0 +1,111 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+plugin trpc {
+  provider = '@zenstackhq/trpc'
+  output = 'server/trpc/routers/generated'
+}
+
+
+model Example {
+  id      String @id @default(uuid())
+  details String
+}
+
+/// @@Gen.model(hide: true)
+model Account {
+    id String @id() @default(cuid())
+    userId String
+    type String
+    provider String
+    providerAccountId String
+    refresh_token String?
+    access_token String?
+    expires_at Int?
+    refresh_token_expires_in Int?
+    token_type String?
+    scope String?
+    id_token String?
+    session_state String?
+    user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+    @@unique([provider, providerAccountId])
+}
+
+/// @@Gen.model(hide: true)
+model Session {
+    id String @id() @default(cuid())
+    sessionToken String @unique()
+    userId String
+    expires DateTime
+    user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  password      String @password @omit
+  image         String?
+  accounts      Account[]
+  sessions      Session[]
+
+  // everyone can signup, and user profile is also publicly readable
+  @@allow('create,read', true)
+
+  // only the user can update or delete their own profile
+  @@allow('update,delete', auth() == this)
+}
+
+/// @@Gen.model(hide: true)
+model VerificationToken {
+    identifier String
+    token String @unique()
+    expires DateTime
+    @@unique([identifier, token])
+}
+
+
+model Pokemon {
+  id                String  @id @default(uuid())
+  name              String
+  supertype         String
+  subtypes          String[]
+  hp                String
+  types             String[]
+  evolvesFrom       String
+  // abilities         Ability[]
+  // attacks           Attack[]
+  // weaknesses        Weakness[]
+  retreatCost       String[]
+  convertedRetreatCost Int
+  number            String
+  artist            String
+  rarity            String
+  flavorText        String
+}
+
+// model Ability {
+//   name        String
+//   text        String
+//   type        String
+// }
+
+// model Attack {
+//   name        String
+//   cost        String[]
+//   convertedEnergyCost Int
+//   damage      String
+//   text        String
+// }
+
+// model Weakness {
+//   type        String
+//   value       String
+// }

@@ -9,12 +9,15 @@
  */
 import { initTRPC } from '@trpc/server'
 import superjson from 'superjson'
-import { OpenApiMeta } from 'trpc-openapi'
+// import { OpenApiMeta } from 'trpc-openapi'
+import { createRouter } from './routers/generated/routers'
 import { Context } from '~/server/trpc/context'
 
-const t = initTRPC.context<Context>().meta<OpenApiMeta>().create({
+const t = initTRPC.context<Context>().create({
   transformer: superjson
 })
+export const appRouter = createRouter(t.router, t.procedure)
+export type AppRouter = typeof appRouter;
 
 /**
  * Unprotected procedure
