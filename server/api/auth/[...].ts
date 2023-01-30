@@ -1,6 +1,6 @@
 // import CredentialsProvider from 'next-auth/providers/credentials'
 import GithubProvider from 'next-auth/providers/github'
-import GithubProvider from 'next-auth/providers/github'
+// import GithubProvider from 'next-auth/providers/github'
 import Auth0Provider from 'next-auth/providers/auth0'
 import { PrismaAdapter } from '@next-auth/prisma-adapter'
 import { PrismaClient } from '@prisma/client'
