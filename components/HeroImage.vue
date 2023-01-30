@@ -2,10 +2,8 @@
   <div class="relative hero-image-container">
     <img class="hero-image" src="https://images.unsplash.com/photo-1613771404721-1f92d799e49f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80" alt="hero image">
     <div class="hero-text">
-      <h1 class=" text-3xl text-shadow-overlay">
-
-      </h1>
-      <small></small>
+      <h1 class=" text-3xl text-shadow-overlay" />
+      <small />
     </div>
   </div>
 </template>e>
