@@ -4,6 +4,6 @@ const { data: examples } = useFetch('/api/examples')
 
 <template>
   <div>
-    <p>Prisma ORM Data from the database, received {{ examples?.length|| 0 }} records: <pre>{{ examples }}</pre></p>
+    <p>Prisma ORM Data from the database, received {{ examples|| 0 }} records: <pre>{{ examples }}</pre></p>
   </div>
 </template>

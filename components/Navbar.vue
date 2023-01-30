@@ -8,9 +8,6 @@
       </div>
       <div class="w-1/3 hidden md:block">
         <div class="text-center">
-
-
-
           <nuxt-link to="/" class="ml-4 text-base no-underline hover:text-gray-800">
             Home
           </nuxt-link>
@@ -21,9 +18,7 @@
       </div>
       <div class="w-1/3">
         <div class="flex justify-end">
-          <button class=" text-xl leading-none p-2 rounded-full hover:bg-gray-100 hover:text-gray-600">
-
-          </button>
+          <button class=" text-xl leading-none p-2 rounded-full hover:bg-gray-100 hover:text-gray-600" />
         </div>
       </div>
     </div>
