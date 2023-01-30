@@ -20,11 +20,13 @@ Some tasks you should probably do in the beginning are:
 - [ ] replace this generic README with a more specific one
 - [ ] install the Vue Volar extension
 - [ ] enable [Volar takeover mode](https://nuxt.com/docs/getting-started/installation#prerequisites) to ensure a smooth editor setup
-- [ ] Prisma: Edit your `prisma/prisma.schema` to your liking
+- [ ] Zenstack: Run `npx zenstack generate` to re-generate the client after changing the schema, this will also build routers into server/trpc/routers/generated
 - [ ] Prisma: Run `npx prisma db push` to sync the schema to your database after changing the schema
-- [ ] Prisma: Run `npx prisma generate` to re-generate the client after changing the schema
 - [ ] Auth: Configure your auth providers to the [NuxtAuthHandler](./server/api/auth/[...].ts)
-- [ ] Auth, optional: Enable global protection by setting `enableGlobalAppMiddleware: true` in [your nuxt.config.ts](./nuxt.config.ts). Delete the logal middleware in the [protected.vue](./pages/protected.vue) page if you do
+- [ ] Auth, optional: Enable global protection by setting `enableGlobalAppMiddleware: true` in [your nuxt.config.ts](./nuxt.config.ts). Delete the local middleware in the [protected.vue](./pages/protected.vue) page if you do
+
+## additional features
+this template uses ZenStack to automatically create trpc routers and procedures
 
 ### Setup
 
