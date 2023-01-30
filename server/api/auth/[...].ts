@@ -23,11 +23,6 @@ export default NuxtAuthHandler({
     GithubProvider.default({
       clientId: process.env.GITHUB_ID,
       clientSecret: process.env.GITHUB_SECRET
-    }),
-    // @ts-expect-error
-    GithubProvider.default({
-      clientId: process.env.GITHUB_ID,
-      clientSecret: process.env.GITHUB_SECRET
     })
   ]
 })
